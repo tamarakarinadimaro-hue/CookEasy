@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macarons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F5DEB3;
+      color: #333;
+    }
+
+    header {
+      background-color: #FFB347; /* warm golden */
+      color: #ffffff;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .slideshow-container {
+      max-width: 400px;
+      margin: 20px auto;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+
+    .recipe {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color:#d97706;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    ol {
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Macarons Recipe</h1>
+  </header>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <img class="slides" src="../ads/macaron1.jpeg" alt="fruit 1">
+    <img class="slides" src="../ads/macaron2.jpeg" alt="fruit 2">
+    <img class="slides" src="../ads/macaron3.jpeg" alt="fruit 3">
+    <img class="slides" src="../ads/macaron4.jpeg" alt="fruit4">
+    <img class="slides" src="../ads/macaron5.jpeg" alt="fruit">
+    <img class="slides" src="../ads/macaron6.jpeg" alt="fruit">
+    <img class="slides" src="../ads/macaron7.jpeg" alt="fruit">
+    <img class="slides" src="../ads/macaron9.jpeg" alt="fruit">
+  </div>
+
+  <div class="recipe">
+    <h2>Ingredients</h2>
+    <ul>
+      <li>1 pre-baked tart shell</li>
+      <li>1 cup pastry cream (custard)</li>
+      <li>Strawberries, blueberries, kiwi, mango (or any fruits of choice)</li>
+      <li>2 tbsp apricot jam (for glaze)</li>
+      <li>1 tbsp water</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+     <li>Spread the pastry cream evenly inside the tart shell.</li>
+      <li>Arrange sliced fruits beautifully on top of the cream.</li>
+      <li>In a small pan, heat apricot jam with water to make a glaze.</li>
+      <li>Brush the glaze gently over the fruits to give a shiny look.</li>
+      <li>Chill for 30 minutes before serving. Slice & enjoy!</li>
+    </ol>
+    </ol>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slides");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change every 3 seconds
+    }
+
+    showSlides();
+  </script>
+</body>
+</html>

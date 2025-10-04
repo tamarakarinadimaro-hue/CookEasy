@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kimbap Recipe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #013220; /* Dark green */
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #FF8C42; /* Bright orange */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .slideshow-container {
+      max-width: 600px;
+      position: relative;
+      margin: 30px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .slides {
+      display: none;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .content h2 {
+      margin-top: 0;
+      color: #013220; /* Dark green */
+    }
+
+    .content h3 {
+      margin-bottom: 10px;
+      color: #FF8C42; /* Orange header accent */
+    }
+
+    ul, ol {
+      margin: 0 0 20px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Korean Kimbap</header>
+
+  <div class="slideshow-container">
+    <div class="slides"><img src="../ads/kimbap1.jpeg" alt="Kimbap 1"></div>
+    <div class="slides"><img src="../ads/kimbap2.jpeg" alt="Kimbap 2"></div>
+    <div class="slides"><img src="../ads/kimbap3.jpeg" alt="Kimbap 3"></div>
+    <div class="slides"><img src="../ads/kimbap4.jpeg" alt="Kimbap 4"></div>
+    <div class="slides"><img src="../ads/kimbap5.jpeg" alt="Kimbap 5"></div>
+  </div>
+
+  <div class="content">
+    <h2>Kimbap</h2>
+    <h3>Ingredients</h3>
+    <ul>
+      <li>Cooked rice</li>
+      <li>Seaweed sheets (nori)</li>
+      <li>Carrots, spinach, pickled radish</li>
+      <li>Eggs</li>
+      <li>Protein of choice (beef, tuna, or crab sticks)</li>
+      <li>Sesame oil & seeds</li>
+    </ul>
+
+    <h3>Instructions</h3>
+    <ol>
+      <li>Season the cooked rice with sesame oil and salt.</li>
+      <li>Prepare fillings: sauté carrots, wilt spinach, slice radish, cook eggs into a thin omelet, and prep protein.</li>
+      <li>Place a seaweed sheet on a bamboo mat, spread rice evenly, leaving space at the top.</li>
+      <li>Layer fillings neatly in the center.</li>
+      <li>Roll tightly with the mat, then slice into bite-sized pieces.</li>
+      <li>Sprinkle with sesame seeds and serve!</li>
+    </ol>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change every 3 seconds
+    }
+  </script>
+
+</body>
+</html>

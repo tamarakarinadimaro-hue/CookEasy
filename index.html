@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CookEasy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    header {
+      background-color: #ff8400;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    /* Search Bar */
+    .search-container {
+      text-align: center;
+      padding: 20px;
+    }
+    .search-container input {
+      width: 60%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    /* Recipe Gallery */
+    .recipe-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .recipe-item {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .recipe-item:hover {
+      transform: translateY(-5px);
+    }
+    .recipe-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .recipe-item a {
+      display: block;
+      padding: 12px 0;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .recipe-item a:hover {
+      color: #ff8000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+
+    <a href="Websitecode.html" style="color:white; margin: 0 15px; text-decoration:none; font-weight:bold;">Home</a>
+    <a href="contact.html" style="color:white; margin: 0 15px; text-decoration:none; font-weight:bold;">Contact</a>
+  </nav>
+  <h1 style="color:white; margin:10px 0;">Welcome to CookEasy!</h1>
+</header>
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search recipes...">
+  </div>
+
+  <div class="recipe-gallery" id="recipeGallery">
+    <div class="recipe-item">
+      <a href="pancakes.html"><img src="ads/pancakes.jpeg" alt="Fluffy Pancakes"></a>
+      <a href="pancakes.html">Fluffy Pancakes</a>
+    </div>
+    <div class="recipe-item">
+      <a href="waffles.html"><img src="ads/waffles.jpg" alt="Crispy Waffles"></a>
+      <a href="waffles.html">Crispy Waffles</a>
+    </div>
+    <div class="recipe-item">
+      <a href="fried-rice.html"><img src="ads/fried-rice.jpeg" alt="Perfect Fried Rice"></a>
+      <a href="fried-rice.html">Perfect Fried Rice</a>
+    </div>
+    <div class="recipe-item">
+      <a href="fried-chicken.html"><img src="ads/fried-chicken.jpeg" alt="Crispy Fried Chicken"></a>
+      <a href="fried-chicken.html">Crispy Fried Chicken</a>
+    </div>
+    <div class="recipe-item">
+      <a href="stew.html"><img src="ads/stew.jpeg" alt="Tasty Tomato Stew"></a>
+      <a href="stew.html">Tasty Tomato Stew</a>
+    </div>
+    <div class="recipe-item">
+      <a href="pizza.html"><img src="ads/pizza.jpeg" alt="Cheesy Pizza"></a>
+      <a href="pizza.html">Cheesy Pizza</a>
+    </div>
+    <div class="recipe-item">
+      <a href="spaghetti.html"><img src="ads/spaghetti.jpeg" alt="Classic Spaghetti"></a>
+      <a href="spaghetti.html">Classic Spaghetti</a>
+    </div>
+    <div class="recipe-item">
+      <a href="burger.html"><img src="ads/burger.jpeg" alt="Juicy Burgers"></a>
+      <a href="burger.html">Juicy Burgers</a>
+    </div>
+    <div class="recipe-item">
+      <a href="fries.html"><img src="ads/fries.jpeg" alt="Fries"></a>
+      <a href="fries.html">Fries</a>
+    </div>
+    <div class="recipe-item">
+      <a href="cakes.html"><img src="ads/cakes.jpeg" alt="Cakes"></a>
+      <a href="cakes.html">Cakes</a>
+    </div>
+    <div class="recipe-item">
+      <a href="plantain.html"><img src="ads/plantain.jpeg" alt="Fried Plantain and Eggs"></a>
+      <a href="plantain.html">Fried Plantain and Eggs</a>
+    </div>
+    <div class="recipe-item">
+      <a href="smoothie.html"><img src="ads/smoothie.jpeg" alt="Smoothies"></a>
+      <a href="smoothie.html">Smoothies</a>
+    </div>
+    <div class="recipe-item">
+      <a href="soups.html"><img src="ads/soups.jpeg" alt="soups"></a>
+      <a href="soups.html">Nigerian Soups and Stews</a>
+    </div>
+    <div class="recipe-item">
+      <a href="jollof-rice.html"><img src="ads/jollof-rice.jpeg" alt="Jollof-rice"></a>
+      <a href="jollof-rice.html">Delicious Jollof-Rice</a>
+    </div>
+    <div class="recipe-item">
+      <a href="sharwama.html"><img src="ads/sharwama.jpeg" alt="Sharwama"></a>
+      <a href="sharwama.html">Delicious Chicken Sharwama</a>
+    </div>
+    <div class="recipe-item">
+      <a href="Crispy Puff-Puff.html"><img src="ads/puff-puff2.jpeg" alt="Crispy Puff-Puff"></a>
+      <a href="Crispy Puff-Puff.html">Crispy Puff-Puff</a>
+    </div>
+    <div class="recipe-item">
+      <a href="suya.html"><img src="ads/suya.jpeg" alt="suya"></a>
+      <a href="suya.html">Delicious Nigerian Suya</a>
+    </div>
+    <div class="recipe-item">
+      <a href="sushi.html"><img src="ads/sushi.jpeg" alt="sushi"></a>
+      <a href="sushi.html">Delicious Japanese Sushi</a>
+    </div>
+    <div class="recipe-item">
+      <a href="hotdog.html"><img src="ads/hotdog.jpeg" alt="Hotdogs"></a>
+      <a href="hotdog.html">Delicious Sausage Rolls</a>
+    </div>
+    <div class="recipe-item">
+      <a href="ramen.html"><img src="ads/ramen.jpeg" alt="Ramen"></a>
+      <a href="ramen.html">Ramen Noodles</a>
+    </div>
+</div>
+
+
+  <script>
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const gallery = document.getElementById('recipeGallery');
+    const items = gallery.getElementsByClassName('recipe-item');
+
+    searchInput.addEventListener('keyup', function() {
+      const filter = searchInput.value.toLowerCase();
+      for (let i = 0; i < items.length; i++) {
+        const text = items[i].innerText.toLowerCase();
+        if (text.includes(filter)) {
+          items[i].style.display = "";
+        } else {
+          items[i].style.display = "none";
+        }
+      }
+    });
+  </script>
+  <script>
+const popup = document.getElementById('popupAd');
+const closeBtn = document.getElementById('closePopup');
+const popupImg = document.getElementById('popupImage');
+
+const ads = ['ads/ad1.png','ads/ad2.jpeg','ads/ad3.jpeg','ads/ad4.jpeg'];
+let adIndex = 0;
+
+setInterval(() => {
+  adIndex = (adIndex + 1) % ads.length;
+  popupImg.src = ads[adIndex];
+}, 3000);
+
+closeBtn.addEventListener('click', () => { popup.style.display = 'none'; });
+</script>
+
+<section id="recipes">
+
+    <!-- Future 12 recipes (hidden by default) -->
+    <div id="more-recipes" style="display: none;">
+
+
+<div class="recipe-gallery" id="recipeGallery">
+    <div class="recipe-item">
+      <a href="CookEasy/yamarita.html"><img src="ads/yamarita.jpeg" alt="Yamarita"></a>
+      <a href="CookEasy/yamarita.html">Crispy Yamarita</a>
+    </div>
+
+     <div class="recipe-item">
+      <a href="CookEasy/lasagna.html"><img src="ads/lasagna.jpeg" alt="lasagna"></a>
+      <a href="CookEasy/lasagna.html">Cheesy Lasagna</a>
+    </div>
+
+<div class="recipe-item">
+      <a href="CookEasy/cookies.html"><img src="ads/cookies.jpeg" alt="cookies"></a>
+      <a href="CookEasy/cookies.html">Delicious Cookies</a>
+    </div>
+
+  <div class="recipe-item">
+      <a href="CookEasy/unicorn-cupakes.html"><img src="ads/unicorn-cupcake.jpeg" alt="unicorn-cupakes"></a>
+      <a href="CookEasy/unicorn-cupakes.html">Unicorn Cupakes</a>
+    </div>
+
+    <div class="recipe-item">
+      <a href="CookEasy/fruit-tart.html"><img src="ads/fruit-tart.jpeg" alt="fruit tart"></a>
+      <a href="CookEasy/fruit-tart.html">Delicious Fruit Tart</a>
+    </div>
+
+<div class="recipe-item">
+      <a href="CookEasy/macaron.html"><img src="ads/macarons.jpeg" alt="macarons"></a>
+      <a href="CookEasy/macaron.html">Tasty Macarons</a>
+    </div>
+
+    <div class="recipe-item">
+      <a href="CookEasy/croissant.html"><img src="ads/croissant2.jpeg" alt="croissant"></a>
+      <a href="CookEasy/croissant.html">Delicious French Croissants</a>
+    </div>
+
+    <div class="recipe-item">
+      <a href="CookEasy/bibimbap.html"><img src="ads/bibimbap.jpeg" alt="bibimbap"></a>
+      <a href="CookEasy/bibimbap.html">Bibimbap</a>
+    </div>
+
+    <div class="recipe-item">
+      <a href="CookEasy/dumplings.html"><img src="ads/dumpling3.jpeg" alt="dumplings"></a>
+      <a href="CookEasy/dumplings.html">Dumplings</a>
+    </div>
+
+    <div class="recipe-item">
+      <a href="CookEasy/kimbap.html"><img src="ads/kimbap.jpeg" alt="dumplings"></a>
+      <a href="CookEasy/kimbap.html">Korean Kimbap</a>
+    </div>
+
+    <div class="recipe-item">
+      <a href="CookEasy/donut.html"><img src="ads/donut.jpeg" alt="donut"></a>
+      <a href="CookEasy/donut.html">Sugar Donuts</a>
+    </div>
+
+    <div class="recipe-item">
+      <a href="CookEasy/tacos.html"><img src="ads/tacos.jpeg" alt="taco"></a>
+      <a href="CookEasy/tacos.html">Mexican Tacos</a>
+    </div>
+    
+
+  <!-- You’ll add the other 11 new recipes here too -->
+
+</div>
+
+  </div>
+
+  <!-- See More button -->
+  <div style="text-align: center; margin-top: 20px;">
+    <button id="see-more-btn" 
+      style="padding: 10px 20px; background-color: #1d3557; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      See More
+    </button>
+  </div>
+</section>
+
+<script>
+  const seeMoreBtn = document.getElementById("see-more-btn");
+  const moreRecipes = document.getElementById("more-recipes");
+
+  seeMoreBtn.addEventListener("click", function() {
+    if (moreRecipes.style.display === "none") {
+      moreRecipes.style.display = "grid"; // fits recipe grid layout
+      seeMoreBtn.textContent = "See Less";
+    } else {
+      moreRecipes.style.display = "none";
+      seeMoreBtn.textContent = "See More";
+    }
+  });
+</script>
+ 
+</body>
+</html>

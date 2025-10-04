@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tacos Recipe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FFF5E1; /* Light creamy orange - tortilla vibe */
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #228B22; /* Forest Green - fresh lettuce + cilantro vibe */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .slideshow-container {
+      max-width: 400px;
+      position: relative;
+      margin: 30px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .slides {
+      display: none;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .content h2 {
+      margin-top: 0;
+      color: #228B22; /* Matches header */
+    }
+
+    .content h3 {
+      margin-bottom: 10px;
+      color: #FF4500; /* Orange Red - spicy salsa vibe */
+    }
+
+    ul, ol {
+      margin: 0 0 20px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Mexican Tacos</header>
+
+  <div class="slideshow-container">
+    <div class="slides"><img src="../ads/taco1.jpeg" alt="Taco 1"></div>
+    <div class="slides"><img src="../ads/taco2.jpeg" alt="Taco 2"></div>
+    <div class="slides"><img src="../ads/taco3.jpeg" alt="Taco 3"></div>
+    <div class="slides"><img src="../ads/taco4.jpeg" alt="Taco 4"></div>
+    <div class="slides"><img src="../ads/taco5.jpeg" alt="Taco 5"></div>
+  </div>
+
+  <div class="content">
+    <h2>Tacos</h2>
+    <h3>Ingredients</h3>
+    <ul>
+      <li>Soft or hard taco shells</li>
+      <li>Ground beef, chicken, or veggies</li>
+      <li>Shredded cheese</li>
+      <li>Lettuce & tomatoes</li>
+      <li>Salsa & sour cream</li>
+      <li>Cilantro & lime (optional)</li>
+    </ul>
+
+    <h3>Instructions</h3>
+    <ol>
+      <li>Cook chosen filling (beef, chicken, or veggies) with seasoning.</li>
+      <li>Warm taco shells in a pan or oven.</li>
+      <li>Fill shells with cooked filling, cheese, and fresh toppings.</li>
+      <li>Add salsa, sour cream, or hot sauce as desired.</li>
+      <li>Garnish with cilantro and a squeeze of lime before serving.</li>
+    </ol>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change every 3 seconds
+    }
+  </script>
+
+</body>
+</html>

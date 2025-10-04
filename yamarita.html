@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crispy Yamarita Recipe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #d97706; /* warm golden */
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .slideshow-container {
+      max-width: 500px;
+      margin: 20px auto;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+
+    .recipe {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #d97706;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    ol {
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Crispy Yamarita</h1>
+    <p>A crunchy, golden Nigerian yam delight 🍠</p>
+  </header>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <img class="slides" src="../ads/yamarita1.jpeg" alt="Yamarita step 1">
+    <img class="slides" src="../ads/yamarita2.jpeg" alt="Yamarita step 2">
+    <img class="slides" src="../ads/yamarita3.jpeg" alt="Yamarita step 3">
+    <img class="slides" src="../ads/yamarita4.jpeg" alt="Yamarita step 4">
+    <img class="slides" src="../ads/yamarita5.jpeg" alt="Yamarita final dish">
+  </div>
+
+  <div class="recipe">
+    <h2>Ingredients</h2>
+    <ul>
+      <li>2 medium yams (peeled and sliced)</li>
+      <li>2 eggs</li>
+      <li>1 cup flour</li>
+      <li>1 tsp garlic powder</li>
+      <li>1 tsp ginger powder</li>
+      <li>1 tsp paprika or chili powder</li>
+      <li>Salt and seasoning cube (to taste)</li>
+      <li>Vegetable oil (for frying)</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>Peel yam, cut into medium slices, and parboil for about 10 minutes until half-cooked.</li>
+      <li>Drain the yam slices and let them cool slightly.</li>
+      <li>In a bowl, whisk eggs with salt and seasoning.</li>
+      <li>In another bowl, mix flour with garlic, ginger, and paprika.</li>
+      <li>Dip each yam slice into the egg mixture, then coat with the seasoned flour.</li>
+      <li>Heat oil in a pan and fry yam slices until golden brown and crispy on both sides.</li>
+      <li>Drain on paper towels and serve hot with ketchup or pepper sauce.</li>
+    </ol>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slides");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change every 3 seconds
+    }
+
+    showSlides();
+  </script>
+</body>
+</html>

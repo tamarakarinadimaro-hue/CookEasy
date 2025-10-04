@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramen Noodles Recipe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FFFACD; /* Lemon Chiffon - soft yellow */
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #CD5C5C; /* Indian Red - warm, appetizing */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .slideshow-container {
+      max-width: 400px;
+      position: relative;
+      margin: 30px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .slides {
+      display: none;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .content h2 {
+      margin-top: 0;
+      color: #CD5C5C; /* Matches header */
+    }
+
+    .content h3 {
+      margin-bottom: 10px;
+      color: #FFD700; /* Golden accent - like noodles */
+    }
+
+    ul, ol {
+      margin: 0 0 20px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Ramen Noodles Recipe</header>
+
+  <div class="slideshow-container">
+    <div class="slides"><img src="../ads/ramen1.jpeg" alt="Ramen Bowl 1"></div>
+    <div class="slides"><img src="../ads/ramen2.jpeg" alt="Ramen Bowl 2"></div>
+    <div class="slides"><img src="../ads/ramen3.jpeg" alt="Ramen Bowl 3"></div>
+    <div class="slides"><img src="../ads/ramen4.jpeg" alt="Ramen Bowl 4"></div>
+    <div class="slides"><img src="../ads/ramen5.jpeg" alt="Ramen Bowl 5"></div>
+  </div>
+
+  <div class="content">
+    <h2>Ramen Noodles</h2>
+    <h3>Ingredients</h3>
+    <ul>
+      <li>Ramen noodles</li>
+      <li>Broth (chicken, pork, or veggie)</li>
+      <li>Soy sauce & miso paste</li>
+      <li>Toppings: boiled egg, sliced pork, seaweed, corn, green onions</li>
+      <li>Sesame oil & garlic</li>
+    </ul>
+
+    <h3>Instructions</h3>
+    <ol>
+      <li>Cook ramen noodles according to package instructions.</li>
+      <li>Prepare broth by simmering stock with soy sauce, miso, garlic, and sesame oil.</li>
+      <li>Place noodles in a bowl and pour the hot broth over.</li>
+      <li>Add toppings such as egg, pork slices, seaweed, and corn.</li>
+      <li>Garnish with green onions and sesame seeds before serving.</li>
+    </ol>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change every 3 seconds
+    }
+  </script>
+
+</body>
+</html>

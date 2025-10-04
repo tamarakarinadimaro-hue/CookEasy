@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unicorn Cupcakes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #FFD1DC; /* warm golden */
+      color: #ffffff;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .slideshow-container {
+      max-width: 400px;
+      margin: 20px auto;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+
+    .recipe {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color:#d97706;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    ol {
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Unicorn Cupcakes</h1>
+    <p>A delicious Rainbow Unicorn Cupcake 🧁 </p>
+  </header>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <img class="slides" src="../ads/cupcakes1.jpeg" alt="cupcake 1">
+    <img class="slides" src="../ads/cupcakes2.jpeg" alt="cupcake 2">
+    <img class="slides" src="../ads/cupcakes3.jpeg" alt="cupcake 3">
+    <img class="slides" src="../ads/cupcakes4.jpeg" alt="cupcake 4">
+    <img class="slides" src="../ads/cupcakes5.jpeg" alt="cupcake">
+  </div>
+
+  <div class="recipe">
+    <h2>Ingredients</h2>
+    <ul>
+      <li>1 1/2 cups all-purpose flour</li>
+<li>1 cup sugar</li>
+<li>1/2 cup unsalted butter, softened</li>
+<li>2 large eggs</li>
+<li>2 tsp baking powder</li>
+<li>1/2 cup milk</li>
+<li>1 tsp vanilla extract</li>
+<li>Food coloring (pastel pink, blue, purple)</li>
+<li>Buttercream frosting (enough for 12 cupcakes)</li>
+<li>Edible glitter, sprinkles, unicorn toppers (optional)</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+     <li>Preheat oven to 350°F (175°C). Line a muffin tin with 12 liners.</li>
+<li>Cream butter and sugar until light. Add eggs one at a time, then vanilla.</li>
+<li>Whisk flour and baking powder. Alternately add flour and milk to the butter mixture until combined.</li>
+<li>Divide batter into 3 bowls. Tint each with a pastel color.</li>
+<li>Spoon small drops of each color into liners to create a marbled swirl; swirl lightly with a toothpick.</li>
+<li>Bake 18–20 minutes. Cool completely before decorating.</li>
+<li>Pipe buttercream swirls, add sprinkles and toppers, then snap photos for the site 📸</li>
+    </ol>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slides");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change every 3 seconds
+    }
+
+    showSlides();
+  </script>
+</body>
+</html>

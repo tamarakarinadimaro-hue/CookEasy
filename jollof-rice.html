@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jollof Rice Recipe</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Color Palette */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    header {
+      background-color: #e63946;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    h1, h2 {
+      color: #000000;
+    }
+    footer {
+      background-color: #222;
+      color: #eee;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+      position: relative;
+      max-width: 500px; /* Medium size */
+      margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .slides {
+      display: none;
+      width: 100%;
+    }
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .fade {
+      animation-name: fade;
+      animation-duration: 2s;
+    }
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    .back-home {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #e63946;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .back-home:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Classic Nigerian Jollof Rice</h1>
+    <p>Spicy, smoky, and full of flavor 🍅🔥</p>
+  </header>
+
+  <main>
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+      <div class="slides fade">
+        <img src="jollof1.jpeg" alt="Jollof Rice 1">
+      </div>
+      <div class="slides fade">
+        <img src="jollof2.jpeg" alt="Jollof Rice 2">
+      </div>
+      <div class="slides fade">
+        <img src="jollof3.jpeg" alt="Jollof Rice 3">
+      </div>
+      <div class="slides fade">
+        <img src="jollof4.jpeg" alt="Jollof Rice 4">
+      </div>
+      <div class="slides fade">
+        <img src="jollof5.jpeg" alt="Jollof Rice 5">
+      </div>
+    </div>
+
+    <section>
+      <h2>Ingredients</h2>
+      <ul>
+        <li>3 cups long-grain parboiled rice</li>
+        <li>5 large tomatoes (blended)</li>
+        <li>2 red bell peppers (blended)</li>
+        <li>1 large onion (half blended, half sliced)</li>
+        <li>2 scotch bonnet peppers (blended)</li>
+        <li>3 tbsp tomato paste</li>
+        <li>1/4 cup vegetable oil</li>
+        <li>2 cups chicken stock</li>
+        <li>2 tsp curry powder</li>
+        <li>2 tsp thyme</li>
+        <li>2 bay leaves</li>
+        <li>Salt and seasoning cubes (to taste)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Instructions</h2>
+      <ol>
+        <li>Wash rice thoroughly and parboil for 10 minutes, then rinse and set aside.</li>
+        <li>Blend tomatoes, red bell peppers, scotch bonnet, and half the onion into a smooth paste.</li>
+        <li>Heat oil in a large pot, add sliced onions and fry until fragrant.</li>
+        <li>Add tomato paste and fry for 3–5 minutes to reduce tanginess.</li>
+        <li>Pour in the blended mix, season with curry, thyme, bay leaves, and salt. Cook until sauce thickens and oil floats on top.</li>
+        <li>Add chicken stock and stir well.</li>
+        <li>Add the rice, stir to coat, then reduce the heat to low. Cover tightly and let it steam.</li>
+        <li>Stir occasionally to prevent burning. Cook until the rice is soft and fluffy.</li>
+        <li>Remove from heat, fluff with a fork, and serve hot with fried plantain, chicken, or salad.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Tips for Perfect Party Jollof</h2>
+      <ul>
+        <li>Cook on low heat to achieve the signature smoky flavor.</li>
+        <li>Don’t add too much water — steaming is key!</li>
+        <li>Use a heavy-bottomed pot to avoid burning.</li>
+      </ul>
+    </section>
+
+    <a href="../index.html" class="back-home">⬅ Back to Home</a>
+  </main>
+
+  <footer>
+    <p>© 2025 CookEasy</p>
+  </footer>
+
+  <!-- Slideshow Script -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script>
+</body>
+</html>

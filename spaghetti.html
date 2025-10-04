@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delicious Spaghetti Recipe</title>
+  <style>
+    body {
+      background: #fff8f0; /* soft cream background */
+      font-family: Arial, sans-serif;
+      color: #1d1d1d;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #e63946; /* tomato red */
+      color: white;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .slideshow {
+      max-width: 300px;
+      margin: 20px auto;
+      position: relative;
+      border: 4px solid #e63946;
+      border-radius: 9px;
+      overflow: hidden;
+    }
+
+    .slideshow img {
+      width: 100%;
+      display: none;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #e63946;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      line-height: 1.8;
+    }
+
+    footer {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Delicious Spaghetti</h1>
+    <p>Classic Italian-style spaghetti with rich tomato sauce 🍝</p>
+  </header>
+<!-- Slideshow -->
+<div class="slideshow">
+  <img src="spaghetti1.jpeg" style="display:block;">
+  <img src="spaghetti2.jpeg">
+  <img src="spaghetti3.jpeg">
+  <img src="spaghetti4.jpeg">
+  <img src="spaghetti5.jpeg">
+</div>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slideshow img");
+
+  function showSlides() {
+    slides.forEach(slide => slide.style.display = "none");
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 5000); // change every 1 minute
+  }
+
+  showSlides();
+</script>
+
+
+  <!-- Recipe Content -->
+  <div class="content">
+    <h2>Ingredients</h2>
+    <ul>
+      <li>200g spaghetti</li>
+      <li>2 tablespoons olive oil</li>
+      <li>1 onion, finely chopped</li>
+      <li>2 garlic cloves, minced</li>
+      <li>400g canned tomatoes</li>
+      <li>2 tablespoons tomato paste</li>
+      <li>1 teaspoon dried oregano</li>
+      <li>Salt and black pepper to taste</li>
+      <li>Fresh basil leaves for garnish</li>
+      <li>Parmesan cheese (optional)</li>
+    </ul>
+
+    <h2>Steps</h2>
+    <ol>
+      <li>Cook spaghetti in salted boiling water according to package instructions. Drain and set aside.</li>
+      <li>Heat olive oil in a pan, sauté onion and garlic until fragrant.</li>
+      <li>Add canned tomatoes, tomato paste, oregano, salt, and pepper. Simmer for 10–15 minutes.</li>
+      <li>Toss cooked spaghetti in the sauce until well coated.</li>
+      <li>Serve hot, garnished with basil leaves and parmesan cheese.</li>
+    </ol>
+  </div>
+
+  <footer>
+    © 2025 CookEasy
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slideshow img");
+
+    function showSlides() {
+      slides.forEach((slide, i) => {
+        slide.style.display = "none";
+      });
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 60000); // change every 1 minute
+    }
+
+    showSlides();
+  </script>
+</body>
+</html>

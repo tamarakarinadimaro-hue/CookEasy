@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crispy Fries - CookEasy</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fff3b0, #ffd36b, #ffa931);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fffef8;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    h1 {
+      text-align: center;
+      color: #d35400;
+    }
+    .slideshow {
+      max-width: 400px;
+      margin: 20px auto;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .slideshow img {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+    h2 {
+      margin-top: 20px;
+      color: #b33e00;
+    }
+    ul, ol {
+      margin-left: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Crispy Fries</h1>
+
+    <!-- Slideshow -->
+    <div class="slideshow">
+      <img src="fries1.jpeg" style="display:block;">
+      <img src="fries2.jpeg">
+      <img src="fries3.jpeg">
+      <img src="fries4.jpeg">
+      <img src="fries5.jpeg">
+    </div>
+
+    <!-- Ingredients -->
+    <h2>Ingredients</h2>
+    <ul>
+      <li>4 large potatoes</li>
+      <li>2–3 cups vegetable oil (for frying)</li>
+      <li>1 tsp salt (to taste)</li>
+      <li>1 tsp paprika or chili powder (optional)</li>
+      <li>Ketchup or mayo for dipping</li>
+    </ul>
+
+    <!-- Instructions -->
+    <h2>Steps</h2>
+    <ol>
+      <li>Peel and cut potatoes into thin sticks.</li>
+      <li>Soak the cut potatoes in cold water for 30 minutes (removes excess starch).</li>
+      <li>Drain and pat dry with a clean towel.</li>
+      <li>Heat oil in a deep pan. Fry potatoes in batches until golden (about 4–5 mins per batch).</li>
+      <li>Remove and drain on paper towels. Sprinkle with salt and paprika while hot.</li>
+      <li>Serve warm with ketchup or your favorite sauce. 🍟</li>
+    </ol>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slideshow img");
+
+    function showSlides() {
+      slides.forEach(slide => slide.style.display = "none");
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 5000); // change every 1 minute
+    }
+
+    showSlides();
+  </script>
+</body>
+</html>

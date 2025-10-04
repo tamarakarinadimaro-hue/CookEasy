@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sausage Rolls Recipe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F5DEB3; /* Wheat beige */
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #8B0000; /* Dark red */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .slideshow-container {
+      max-width: 400px;
+      position: relative;
+      margin: 30px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .slides {
+      display: none;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .content h2 {
+      margin-top: 0;
+      color: #8B0000; /* Matches header */
+    }
+
+    .content h3 {
+      margin-bottom: 10px;
+      color: #F5DEB3; /* Accent with wheat beige */
+    }
+
+    ul, ol {
+      margin: 0 0 20px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Sausage Rolls Recipe</header>
+
+  <div class="slideshow-container">
+    <div class="slides"><img src="../ads/sausage1.jpeg" alt="Sausage Roll 1"></div>
+    <div class="slides"><img src="../ads/sausage2.jpeg" alt="Sausage Roll 2"></div>
+    <div class="slides"><img src="../ads/sausage3.jpeg" alt="Sausage Roll 3"></div>
+    <div class="slides"><img src="../ads/sausage4.jpeg" alt="Sausage Roll 4"></div>
+    <div class="slides"><img src="../ads/sausage5.jpeg" alt="Sausage Roll 5"></div>
+  </div>
+
+  <div class="content">
+    <h2>Sausage Rolls</h2>
+    <h3>Ingredients</h3>
+    <ul>
+      <li>Puff pastry sheets</li>
+      <li>Sausages (pork, chicken, or beef)</li>
+      <li>1 egg (for egg wash)</li>
+      <li>Salt & pepper</li>
+      <li>Optional: sesame seeds for garnish</li>
+    </ul>
+
+    <h3>Instructions</h3>
+    <ol>
+      <li>Preheat oven to 200°C (400°F).</li>
+      <li>Cut puff pastry into rectangles and place a sausage on each.</li>
+      <li>Roll the pastry over the sausage and seal the edges with a fork.</li>
+      <li>Brush the tops with egg wash and sprinkle sesame seeds if desired.</li>
+      <li>Bake for 20–25 minutes until golden brown and crispy.</li>
+      <li>Let cool slightly, then serve warm!</li>
+    </ol>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change every 3 seconds
+    }
+  </script>
+
+</body>
+</html>

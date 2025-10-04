@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juicy Burger - CookEasy</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f8e1a1, #fdd9a0, #f6a36d);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff8f0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    h1 {
+      text-align: center;
+      color: #b33e00;
+    }
+    .slideshow {
+      max-width: 500px;
+      margin: 20px auto;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .slideshow img {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+    h2 {
+      margin-top: 20px;
+      color: #d35400;
+    }
+    ul, ol {
+      margin-left: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Juicy Burger</h1>
+
+    <!-- Slideshow -->
+    <div class="slideshow">
+      <img src="burger1.jpeg" style="display:block;">
+      <img src="burger2.jpeg">
+      <img src="burger3.jpeg">
+      <img src="burger4.jpeg">
+      <img src="burger5.jpeg">
+    </div>
+
+    <!-- Ingredients -->
+    <h2>Ingredients</h2>
+    <ul>
+      <li>500g ground beef</li>
+      <li>1 medium onion (finely chopped)</li>
+      <li>2 cloves garlic (minced)</li>
+      <li>1 egg</li>
+      <li>½ cup breadcrumbs</li>
+      <li>1 tsp salt</li>
+      <li>1 tsp black pepper</li>
+      <li>1 tbsp soy sauce (optional)</li>
+      <li>4 burger buns</li>
+      <li>Lettuce leaves</li>
+      <li>Sliced tomatoes</li>
+      <li>Sliced cheese (cheddar or American)</li>
+      <li>Ketchup, mayo, or mustard</li>
+    </ul>
+
+    <!-- Instructions -->
+    <h2>Steps</h2>
+    <ol>
+      <li>In a large bowl, mix ground beef, onion, garlic, egg, breadcrumbs, salt, pepper, and soy sauce until combined.</li>
+      <li>Shape into 4 patties of equal size.</li>
+      <li>Heat a pan or grill and cook patties for 4–5 minutes on each side (until fully cooked and juicy).</li>
+      <li>Toast the burger buns lightly.</li>
+      <li>Assemble: place lettuce, tomato, burger patty, cheese slice, and sauces inside the bun.</li>
+      <li>Serve hot with fries or salad. Enjoy!</li>
+    </ol>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slideshow img");
+
+    function showSlides() {
+      slides.forEach(slide => slide.style.display = "none");
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 5000); // change every 1 minute
+    }
+
+    showSlides();
+  </script>
+</body>
+</html>

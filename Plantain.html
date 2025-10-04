@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantain & Eggs Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8e6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffcc66;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .recipe-container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+        }
+        h2 {
+            color: #ff9933;
+        }
+        ul, ol {
+            margin: 10px 0 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Plantain & Eggs 🍳🍌</h1>
+    </header>
+
+    <div class="recipe-container">
+
+        <!-- Slideshow -->
+        <div class="slideshow-container">
+            <img class="slides" src="plantain_eggs1.jpeg" alt="Plantain and Eggs 1">
+            <img class="slides" src="plantain_eggs2.jpeg" alt="Plantain and Eggs 2">
+            <img class="slides" src="plantain_eggs3.jpeg" alt="Plantain and Eggs 3">
+            <img class="slides" src="plantain_eggs4.jpeg" alt="Plantain and Eggs 4">
+        </div>
+
+        <h2>Ingredients:</h2>
+        <ul>
+            <li>2 ripe plantains</li>
+            <li>2–3 eggs</li>
+            <li>Salt to taste</li>
+            <li>1–2 tbsp vegetable oil or butter</li>
+            <li>Optional: pepper, onions, tomatoes</li>
+        </ul>
+
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Peel and slice the plantains into rounds or diagonal slices.</li>
+            <li>Heat oil in a pan over medium heat.</li>
+            <li>Fry the plantains until golden brown on both sides, then remove from the pan.</li>
+            <li>Crack eggs into the same pan and scramble or fry as preferred. Add salt (and optional pepper, onions, tomatoes).</li>
+            <li>Serve the eggs with the fried plantains on a plate and enjoy!</li>
+        </ol>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slides");
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        showSlides();
+    </script>
+</body>
+</html>

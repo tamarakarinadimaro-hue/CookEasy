@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumplings Recipe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FAF0E6; /* Linen background */
+      color: #333;
+    }
+
+    header {
+      background-color: #CD5C5C; /* Indian Red header */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 400px;
+      margin: 20px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .mySlides img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #CD5C5C;
+      text-align: center;
+    }
+
+    h3 {
+      margin-top: 20px;
+      color: #444;
+    }
+
+    ul, ol {
+      margin: 10px 0 20px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dumplings</h1>
+    <p>Soft, Juicy, and Flavor-Packed 🥟</p>
+  </header>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="mySlides"><img src="../ads/dumpling1.jpeg" alt="Dumpling image 1"></div>
+    <div class="mySlides"><img src="../ads/dumpling2.jpeg" alt="Dumpling image 2"></div>
+    <div class="mySlides"><img src="../ads/dumpling.jpeg" alt="Dumpling image 3"></div>
+    <div class="mySlides"><img src="../ads/dumpling4.jpeg" alt="Dumpling image 4"></div>
+    <div class="mySlides"><img src="../ads/dumpling5.jpeg" alt="Dumpling image 5"></div>
+  </div>
+
+  <!-- Ingredients & Instructions -->
+  <div class="content">
+    <h2>Ingredients</h2>
+    <ul>
+      <li>2 cups all-purpose flour</li>
+      <li>1/2 cup water</li>
+      <li>200g ground pork (or chicken)</li>
+      <li>1 cup cabbage, finely chopped</li>
+      <li>2 green onions, sliced</li>
+      <li>2 cloves garlic, minced</li>
+      <li>1 tbsp soy sauce</li>
+      <li>1 tsp sesame oil</li>
+      <li>Pinch of salt and pepper</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>Mix flour and water to form dough. Knead until smooth, then rest for 30 mins.</li>
+      <li>In a bowl, combine pork, cabbage, green onions, garlic, soy sauce, sesame oil, salt, and pepper.</li>
+      <li>Roll dough thin and cut into small circles.</li>
+      <li>Place filling in the center, fold in half, and pleat the edges to seal.</li>
+      <li>Boil dumplings until they float, or pan-fry until crispy golden bottoms form.</li>
+      <li>Serve hot with soy sauce or chili oil. Enjoy 🥟✨</li>
+    </ol>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script>
+
+</body>
+</html>

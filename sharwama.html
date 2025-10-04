@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shawarma Recipe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #fdf6f0;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #b3541e;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 600px;
+      position: relative;
+      margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .mySlides img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #b3541e;
+      margin-top: 20px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Delicious Shawarma</h1>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <img src="shawarma1.jpeg" alt="Shawarma 1">
+    </div>
+    <div class="mySlides">
+      <img src="shawarma2.jpeg" alt="Shawarma 2">
+    </div>
+    <div class="mySlides">
+      <img src="shawarma3.jpeg" alt="Shawarma 3">
+    </div>
+    <div class="mySlides">
+      <img src="shawarma4.jpeg" alt="Shawarma 4">
+    </div>
+    <div class="mySlides">
+      <img src="shawarma5.jpeg" alt="Shawarma 5">
+    </div>
+  </div>
+
+  <div class="content">
+    <h2>Ingredients</h2>
+    <ul>
+      <li>2 chicken breasts (sliced thin)</li>
+      <li>1 large shawarma bread or tortilla wraps</li>
+      <li>2 tbsp mayonnaise</li>
+      <li>2 tbsp ketchup</li>
+      <li>1 tsp chili sauce (optional)</li>
+      <li>1 small cabbage (shredded)</li>
+      <li>2 carrots (grated)</li>
+      <li>1 onion (sliced)</li>
+      <li>2 cucumbers (sliced)</li>
+      <li>Spices: curry, thyme, garlic powder, salt, seasoning cube</li>
+    </ul>
+
+    <h2>Steps</h2>
+    <ol>
+      <li>Marinate chicken with curry, thyme, garlic, salt, and seasoning cube. Grill or fry until golden.</li>
+      <li>Mix mayonnaise, ketchup, and chili sauce for the creamy filling.</li>
+      <li>Place shawarma bread on a flat surface, spread the sauce, then add chicken, cabbage, carrot, cucumber, and onion.</li>
+      <li>Wrap tightly, then heat on a pan or sandwich maker for 2–3 minutes.</li>
+      <li>Slice in half and serve warm. Enjoy your homemade Nigerian shawarma!</li>
+    </ol>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script>
+</body>
+</html>

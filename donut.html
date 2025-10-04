@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donuts Recipe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FFE4E1; /* Misty Rose - soft pink candy vibe */
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #FF69B4; /* Hot Pink - playful donut glaze */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .slideshow-container {
+      max-width: 400px;
+      position: relative;
+      margin: 30px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .slides {
+      display: none;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .content h2 {
+      margin-top: 0;
+      color: #FF69B4; /* Matches header */
+    }
+
+    .content h3 {
+      margin-bottom: 10px;
+      color: #FFD700; /* Golden yellow - like fried donuts */
+    }
+
+    ul, ol {
+      margin: 0 0 20px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Sugar Donut 🍩</header>
+
+  <div class="slideshow-container">
+    <div class="slides"><img src="../ads/donut1.jpeg" alt="Donut 1"></div>
+    <div class="slides"><img src="../ads/donut2.jpeg" alt="Donut 2"></div>
+    <div class="slides"><img src="../ads/donut3.jpeg" alt="Donut 3"></div>
+    <div class="slides"><img src="../ads/donut4.jpeg" alt="Donut 4"></div>
+    <div class="slides"><img src="../ads/donut5.jpeg" alt="Donut 5"></div>
+  </div>
+
+  <div class="content">
+    <h2>Donuts</h2>
+    <h3>Ingredients</h3>
+    <ul>
+      <li>All-purpose flour</li>
+      <li>Sugar</li>
+      <li>Milk</li>
+      <li>Eggs</li>
+      <li>Butter</li>
+      <li>Yeast</li>
+      <li>Glaze & sprinkles (for topping)</li>
+    </ul>
+
+    <h3>Instructions</h3>
+    <ol>
+      <li>Mix flour, sugar, milk, eggs, butter, and yeast into a soft dough.</li>
+      <li>Let the dough rise until doubled in size.</li>
+      <li>Roll out and cut into donut shapes.</li>
+      <li>Fry in hot oil until golden brown.</li>
+      <li>Dip in glaze and add colorful sprinkles.</li>
+      <li>Let set before serving.</li>
+    </ol>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change every 3 seconds
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheesy Pizza - CookEasy</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e3c29c;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #e3c29c;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #e63946;
+    }
+    .slideshow {
+  max-width: 400px;   /* controls size (try 400px if you want smaller) */
+  margin: 20px auto;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.slideshow img {
+  width: 100%;        /* image will resize to fit container */
+  height: auto;
+  display: none;
+}
+    .slideshow img.active {
+      display: block;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    h2 {
+      margin-top: 30px;
+      color: #2a9d8f;
+    }
+    ul, ol {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cheesy Pizza</h1>
+
+    <!-- Slideshow -->
+    <div class="slideshow">
+      <img src="pizza1.jpeg" class="active" alt="Pizza 1">
+<img src="pizza2.jpeg" alt="Pizza 2">
+<img src="pizza3.jpeg" alt="Pizza 3">
+<img src="pizza4.jpeg" alt="Pizza 4">
+<img src="pizza5.jpeg" alt="Pizza 5">
+    </div>
+
+    <!-- Ingredients -->
+    <h2>Ingredients</h2>
+    <ul>
+      <li>2 cups all-purpose flour</li>
+      <li>1 packet dry yeast</li>
+      <li>1 cup warm water</li>
+      <li>2 tbsp olive oil</li>
+      <li>1/2 tsp salt</li>
+      <li>1 cup pizza sauce</li>
+      <li>2 cups shredded mozzarella cheese</li>
+      <li>Your choice of toppings (pepperoni, veggies, etc.)</li>
+    </ul>
+
+    <!-- Steps -->
+    <h2>Steps</h2>
+    <ol>
+      <li>Mix flour, yeast, salt, warm water, and olive oil to form a dough.</li>
+      <li>Knead the dough for 8–10 minutes until smooth. Cover and let rise for 1 hour.</li>
+      <li>Preheat oven to 220°C (430°F).</li>
+      <li>Roll out the dough into a circle and place on a baking tray.</li>
+      <li>Spread pizza sauce evenly over the dough.</li>
+      <li>Top with mozzarella cheese and your favorite toppings.</li>
+      <li>Bake for 12–15 minutes, until the crust is golden and cheese is melted.</li>
+      <li>Slice and enjoy your cheesy pizza! 🍕</li>
+    </ol>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll(".slideshow img");
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 5000); // 60,000 ms = 1 minute
+  </script>
+</body>
+</html>

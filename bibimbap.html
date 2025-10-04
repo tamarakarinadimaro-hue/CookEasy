@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibimbap</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8DC; /* Soft cornsilk background */
+      color: #333;
+    }
+
+    header {
+      background-color: #FF7F50; /* Coral header */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 400px;
+      margin: 20px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .mySlides img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #FF7F50;
+      text-align: center;
+    }
+
+    h3 {
+      margin-top: 20px;
+      color: #444;
+    }
+
+    ul, ol {
+      margin: 10px 0 20px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bibimbap</h1>
+    <p>Korean Mixed Rice Bowl 🍚🌈</p>
+  </header>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="mySlides"><img src="bibimbap1.jpeg" alt="Bibimbap image 1"></div>
+    <div class="mySlides"><img src="bibimbap2.jpeg" alt="Bibimbap image 2"></div>
+    <div class="mySlides"><img src="bibimbap3.jpeg" alt="Bibimbap image 3"></div>
+    <div class="mySlides"><img src="bibimbap4.jpeg" alt="Bibimbap image 4"></div>
+    <div class="mySlides"><img src="bibimbap5.jpeg" alt="Bibimbap image 5"></div>
+  </div>
+
+  <!-- Ingredients & Instructions -->
+  <div class="content">
+    <h2>Ingredients</h2>
+    <ul>
+      <li>2 cups cooked white rice</li>
+      <li>1 small zucchini, julienned</li>
+      <li>1 small carrot, julienned</li>
+      <li>1 cup spinach, blanched</li>
+      <li>4 shiitake mushrooms, sliced</li>
+      <li>1 fried egg</li>
+      <li>Sesame oil and sesame seeds</li>
+      <li>2 tbsp gochujang (Korean chili paste)</li>
+      <li>Soy sauce to taste</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>Cook the rice and set aside.</li>
+      <li>Sauté zucchini, carrots, and mushrooms separately until tender.</li>
+      <li>Blanch spinach, then squeeze excess water and season lightly with sesame oil.</li>
+      <li>Place rice in a bowl, arrange all vegetables on top in sections, and add the fried egg at the center.</li>
+      <li>Drizzle with sesame oil, sprinkle sesame seeds, and serve with gochujang.</li>
+      <li>Mix well before eating and enjoy your colorful bibimbap! 🌈</li>
+    </ol>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script>
+
+</body>
+</html>
